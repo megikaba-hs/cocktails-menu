@@ -2,23 +2,22 @@ import React from "react";
 
 import { cocktailsMenu } from "../data/cocktailsMenu";
 import CocktailsMenu from "../components/CocktailsMenu";
+import FirstPage from "../components/FirstPage";
 
 export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-3xl p-4">
-      <div className="rounded-2xl bg-[url('/images/orange-coctails.jpg')] bg-contain">
-        <section className="mb-8 rounded-2xl bg-white p-8 text-center shadow-lg">
-          <h1 className="text-4xl font-bold text-[#cc5a2e]">
-            Cocktails Menu 🍸
-          </h1>
-        </section>
+      <FirstPage imageUrl="images/el-sahara-menu.PNG" />
 
+      <div className="mt-8 space-y-8">
         {cocktailsMenu.map((section) => (
-          <CocktailsMenu
+          <div
             key={section.category}
-            category={section.category}
-            items={section.items}
-          />
+            className="rounded-2xl bg-cover bg-center p-4"
+            style={{ backgroundImage: `url(${section.imageUrl})` }}
+          >
+            <CocktailsMenu category={section.category} items={section.items} />
+          </div>
         ))}
       </div>
     </div>

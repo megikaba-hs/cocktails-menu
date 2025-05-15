@@ -495,6 +495,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.relative {
+  position: relative;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -503,11 +506,11 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .block {
   display: block;
@@ -515,8 +518,14 @@ video {
 .flex {
   display: flex;
 }
+.h-auto {
+  height: auto;
+}
 .min-h-screen {
   min-height: 100vh;
+}
+.w-full {
+  width: 100%;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -527,21 +536,34 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.overflow-hidden {
+  overflow: hidden;
+}
 .rounded-2xl {
   border-radius: 1rem;
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+.bg-amber-800\/40 {
+  background-color: rgb(146 64 14 / 0.4);
 }
-.bg-white\/80 {
-  background-color: rgb(255 255 255 / 0.8);
+.bg-amber-800\/50 {
+  background-color: rgb(146 64 14 / 0.5);
 }
-.bg-\[url\(\'\/images\/orange-coctails\.jpg\'\)\] {
-  background-image: url('/images/orange-coctails.jpg');
+.bg-amber-800\/60 {
+  background-color: rgb(146 64 14 / 0.6);
 }
 .bg-contain {
   background-size: contain;
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-center {
+  background-position: center;
 }
 .p-0 {
   padding: 0px;
@@ -549,34 +571,23 @@ video {
 .p-4 {
   padding: 1rem;
 }
-.p-8 {
-  padding: 2rem;
-}
 .text-center {
   text-align: center;
-}
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .font-bold {
   font-weight: 700;
 }
-.text-\[\#cc5a2e\] {
+.text-\[\#D8A34D\] {
   --tw-text-opacity: 1;
-  color: rgb(204 90 46 / var(--tw-text-opacity));
+  color: rgb(216 163 77 / var(--tw-text-opacity));
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -586,38 +597,41 @@ video {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
-.text-gray-700 {
+.text-stone-400 {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(168 162 158 / var(--tw-text-opacity));
 }
-.text-gray-800 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #4b3a2a; /* warm dark brown for body text */
-  --accent-primary: #cc5a2e; /* burnt orange for headers and highlights */
-  --accent-secondary: #a67c52; /* mocha brown for prices or subtle highlights */
-  --muted-text: #6e5f58; /* for item descriptions */
-  --card-bg: #fff7f3; /* soft blush background for card sections */
+  --background: #f6c197; /* warm baked apricot */
+  --foreground: #5a2d10;
+  --accent-primary: #ff8c42;
+  --accent-secondary: #cc5c24;
+  --muted-text: #9c623d;
+  --card-bg: #f2b284; /* toasty orange-peach */
 }
 
-/* Dark Theme */
+/* Dark Theme - Glowing Ember Mood */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #f4eae5;
-    --accent-primary: #e07a5f;
-    --accent-secondary: #f4a896;
-    --muted-text: #cbbfb8;
-    --card-bg: #1a1a1a;
+    --background: #40210f; /* ember-gold brown */
+    --foreground: #ffe3cc;
+    --accent-primary: #ff9d5c;
+    --accent-secondary: #d37442;
+    --muted-text: #cda07e;
+    --card-bg: #5a2d10;
   }
 }
 
@@ -627,19 +641,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background-image: linear-gradient(
-    145deg,
-    #fff0ea 0%,
-    #ffffff 40%,
-    #fff0ea 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-/* Custom Shadow with Softer Pink Glow */
-.shadow-pastel {
-  box-shadow: 0 4px 20px rgba(240, 177, 160, 0.3);
-  border-radius: 1rem;
+  /* Removed gradient */
+  background-image: none;
+  background-color: var(--background);
 }
 

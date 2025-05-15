@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #4b3a2a; /* warm dark brown for body text */
-  --accent-primary: #cc5a2e; /* burnt orange for headers and highlights */
-  --accent-secondary: #a67c52; /* mocha brown for prices or subtle highlights */
-  --muted-text: #6e5f58; /* for item descriptions */
-  --card-bg: #fff7f3; /* soft blush background for card sections */
+  --background: #f6c197; /* warm baked apricot */
+  --foreground: #5a2d10;
+  --accent-primary: #ff8c42;
+  --accent-secondary: #cc5c24;
+  --muted-text: #9c623d;
+  --card-bg: #f2b284; /* toasty orange-peach */
 }
 
-/* Dark Theme */
+/* Dark Theme - Glowing Ember Mood */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #f4eae5;
-    --accent-primary: #e07a5f;
-    --accent-secondary: #f4a896;
-    --muted-text: #cbbfb8;
-    --card-bg: #1a1a1a;
+    --background: #40210f; /* ember-gold brown */
+    --foreground: #ffe3cc;
+    --accent-primary: #ff9d5c;
+    --accent-secondary: #d37442;
+    --muted-text: #cda07e;
+    --card-bg: #5a2d10;
   }
 }
 
@@ -29,18 +29,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background-image: linear-gradient(
-    145deg,
-    #fff0ea 0%,
-    #ffffff 40%,
-    #fff0ea 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-/* Custom Shadow with Softer Pink Glow */
-.shadow-pastel {
-  box-shadow: 0 4px 20px rgba(240, 177, 160, 0.3);
-  border-radius: 1rem;
+  /* Removed gradient */
+  background-image: none;
+  background-color: var(--background);
 }

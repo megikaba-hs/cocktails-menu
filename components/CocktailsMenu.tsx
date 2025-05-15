@@ -15,10 +15,12 @@ const MenuSection: React.FC<Props> = ({ category, items }) => {
   const isFlavorsMenu = category === "FLAVORS MENU";
 
   return (
-    <section className="shadow-pastel mb-8 rounded-2xl bg-white/80 p-4">
-      <h2 className="text-center text-2xl font-bold text-black">{category}</h2>
+    <section className="shadow-pastel rounded-2xl bg-amber-800/60 p-4">
+      <h2 className="text-center text-2xl font-bold text-[#D8A34D]">
+        {category}
+      </h2>
       <ul
-        className={`list-none p-0 text-gray-800 ${
+        className={`list-none p-0 text-white ${
           isFlavorsMenu ? "text-center" : ""
         }`}
       >
@@ -30,9 +32,9 @@ const MenuSection: React.FC<Props> = ({ category, items }) => {
               <>
                 <div className="flex justify-between">
                   <span className="font-bold">{item.name}</span>
-                  <span className="text-black text-gray-700">{item.price}</span>
+                  <span className="text-white font-bold">{item.price}</span>
                 </div>
-                <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+                <p className="mt-1 text-sm text-black">{item.description}</p>
               </>
             )}
           </li>
