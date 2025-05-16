@@ -547,17 +547,8 @@ video {
 .rounded-2xl {
   border-radius: 1rem;
 }
-.bg-amber-800\/40 {
-  background-color: rgb(146 64 14 / 0.4);
-}
-.bg-amber-800\/50 {
-  background-color: rgb(146 64 14 / 0.5);
-}
 .bg-amber-800\/60 {
   background-color: rgb(146 64 14 / 0.6);
-}
-.bg-contain {
-  background-size: contain;
 }
 .bg-cover {
   background-size: cover;
@@ -593,25 +584,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-.text-stone-400 {
-  --tw-text-opacity: 1;
-  color: rgb(168 162 158 / var(--tw-text-opacity));
-}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 :root {
