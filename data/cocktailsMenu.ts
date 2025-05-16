@@ -28,7 +28,7 @@ export const cocktailsMenu = [
   },
   {
     category: "ALCOHOL BOTTLE",
-    imageUrl: "/images/alcohol-bottles.PNG",
+    imageUrl: "/images/alcohol-bottles.png",
     items: [
       {
         name: "Vodka Absolut (1L)",
@@ -84,7 +84,7 @@ export const cocktailsMenu = [
   },
   {
     category: "CHAMPAGNES",
-    imageUrl: "/images/champagnes.PNG",
+    imageUrl: "/images/champagnes.png",
     items: [
       { name: "Spumante", price: "3000L", description: "" },
       { name: "Moet Imperial Brut", price: "15000L", description: "" },
@@ -369,7 +369,7 @@ export const cocktailsMenu = [
     ],
   },
   {
-    category: "WINES BOTTLES",
+    category: "WINE BOTTLE",
     imageUrl: "/images/cocktails-sahara.PNG",
     items: [
       { name: "Chardonay", price: "3000L", description: "" },
